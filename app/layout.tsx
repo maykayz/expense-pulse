@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
+import { Box } from '@radix-ui/themes';
+import Sidebar from './components/sidebar/index'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +18,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const sidebarWidth = 100
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Theme>
+          <div className="flex flex-row h-screen bg-gray-900">
+            <Box>
+              <Sidebar width={sidebarWidth}/>
+            </Box>
+            <Box className="bg-white rounded-3xl p-7 m-2" style={{width: `calc(100% - ${sidebarWidth}px)`}}>
+            {children}
+            </Box>
+          </div>
+        </Theme>
+      </body>
     </html>
   )
 }
