@@ -4,7 +4,7 @@ import {Heading, Flex, Text, Button} from "@radix-ui/themes";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {MdOutlineKeyboardArrowDown} from "react-icons/md";
 
-const Header = ({title}: {title: string}) => {
+const Header: React.FC<{title: string}>= ({title}) => {
   const user = {
     name: "May K",
     avatar: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"

@@ -1,5 +1,6 @@
 import PortfolioCard from './PortfolioCard';
-import AssetCard from './AssetCard';
+import LineChartCard from './LineChartCard';
+import BarChartCard from "./BarChartCard";
 import ActionCard from './ActionCard';
 
-export {PortfolioCard, AssetCard, ActionCard};
+export {PortfolioCard, LineChartCard, ActionCard, BarChartCard};

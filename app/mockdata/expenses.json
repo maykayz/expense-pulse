@@ -1,0 +1,44 @@
+{
+    "data": [
+    {
+      "id": "12",
+      "platform": "Grab",
+      "category": "Grocery",
+      "amount": 200,
+      "currency": "THB",
+      "date": "12-12-2023"
+    },
+    {
+      "id": "12",
+      "platform": "AIS",
+      "category": "Phone Bill",
+      "amount": 120,
+      "currency": "THB",
+      "date": "12-12-2023"
+    },
+    {
+      "id": "12",
+      "platform": "PromptPay",
+      "category": "Grocery",
+      "amount": 300,
+      "currency": "THB",
+      "date": "12-12-2023"
+    },
+    {
+      "id": "12",
+      "platform": "PEA",
+      "category": "Electricity",
+      "amount": 1100,
+      "currency": "THB",
+      "date": "12-12-2023"
+    },
+    {
+      "id": "12",
+      "platform": "Kplus",
+      "category": "Water Bill",
+      "amount": 600,
+      "currency": "THB",
+      "date": "12-12-2023"
+    }
+  ]
+}

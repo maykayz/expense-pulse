@@ -2,14 +2,12 @@
 import React from "react";
 import {Box, Heading, Flex, Text, Button} from "@radix-ui/themes";
 
-interface ActionCardProps {
+interface P  {
   title: string;
   buttonText: string;
   handleClick: () => void;
-  textColor?: string;
-  bgColor?: string;
 }
-const ActionCard = ({title, handleClick, buttonText, bgColor, textColor}: ActionCardProps) => {
+const ActionCard: React.FC<P> = ({title, handleClick, buttonText}) => {
   return (
     <Box className={`bg-black rounded-xl p-4 h-56`} my="3">
       <Flex direction="column">

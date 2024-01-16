@@ -2,7 +2,7 @@ import React from "react";
 import {Box, Heading, Flex, Text, IconButton} from "@radix-ui/themes";
 import {RxDotsVertical} from "react-icons/rx";
 
-const PortfolioCard = ({color = "bg-blue-100"}: {color?: string}) => {
+const PortfolioCard: React.FC<{color?: string}> = ({color = "bg-blue-100"}) => {
   return (
     <Box className={`${color} rounded-xl p-4 h-56`} my="3">
       <Flex direction="column">

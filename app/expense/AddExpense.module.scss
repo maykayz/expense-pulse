@@ -1,0 +1,44 @@
+@import '../variables.scss';
+
+.input {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  color: #000;
+  width: 100%;
+  ::placeholder {
+    color: #000;
+  }
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    color: white !important;
+  }
+}
+
+.select {
+  background-color: #fff;
+  border: 1px solid $border-color;
+  color: #000;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    color: black !important;
+  }
+}
+
+.button {
+  color: #fff;
+  &.valid {
+    background-color: $theme-color-primary;
+  }
+  &.invalid {
+    background-color: $invalid-color;
+  }
+  &.valid:hover {
+    background-color: $theme-color-primary;
+  }
+}

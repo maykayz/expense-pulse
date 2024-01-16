@@ -1,82 +1,41 @@
+"use client";
+import {useState, useEffect} from "react";
 import {Grid, Flex, Box, Heading, Table} from "@radix-ui/themes";
 import Header from "../components/header";
 import {ActionCard} from "../components/card";
 import {LuChevronDown} from "react-icons/lu";
 import ExpenseTable from "../components/table/ExpenseTable";
 import {expenseAPI} from "../services";
-import {useEffect} from "react";
+import AddExpense from "./AddExpense";
 
-const fetchExpenses = async () => {
+// const fetchExpenses = async () => {
+//   "use server";
+//   const result = await expenseAPI.getExpenses();
+//   return result.data;
+// };
 
-  const result = await expenseAPI.getExpenses();
-  console.log(result)
-  return result.data;
-//   const result = await fetch(process.env.URL + '/api/expenses', {method: 'GET'});
-// console.log(result)
-// //   if (result.ok) {
-// // console.log(result.json())
-// //     return result.json();
-// //   }
-//   return [];
-};
+const Expense:React.FC<{}> = () => {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-const Expense = async () => {
-  const expenseList = [
-    {
-      id: "12",
-      platform: "Grab",
-      category: "Grocery",
-      amount: 200,
-      currency: "THB",
-      date: "12-12-2023",
-    },
-    {
-      id: "12",
-      platform: "AIS",
-      category: "Phone Bill",
-      amount: 120,
-      currency: "THB",
-      date: "12-12-2023",
-    },
-    {
-      id: "12",
-      platform: "PromptPay",
-      category: "Grocery",
-      amount: 300,
-      currency: "THB",
-      date: "12-12-2023",
-    },
-    {
-      id: "12",
-      platform: "PEA",
-      category: "Electricity",
-      amount: 1100,
-      currency: "THB",
-      date: "12-12-2023",
-    },
-    {
-      id: "12",
-      platform: "Kplus",
-      category: "Water Bill",
-      amount: 600,
-      currency: "THB",
-      date: "12-12-2023",
-    },
-  ];
+  const fetchExpenses = async () => {
+    setIsLoading(true);
+    const result = await expenseAPI.getExpenses();
+    if (result) {
+      setData(result.data);
+    }
+    setIsLoading(false);
+  };
 
-  async function handleNewExpenseClick() {
-    "use server";
-
-    // ...
-  }
-
-  const data = await fetchExpenses();
+  useEffect(() => {
+    fetchExpenses();
+  }, []);
 
   return (
     <div>
       <Header title="Expense" />
-      <Grid columns="1" gap="3" width="auto">
-        <Box>
+      <Grid columns="4" gap="3" width="auto">
+        <Box className="col-span-3 px-4">
           <Flex mb="3" gap="4" direction="row" align="center">
             <Heading className="w-1/2">Latest Expenses</Heading>
             <Heading className="w-1/2 flex justify-end" size="3">
@@ -84,11 +43,11 @@ const Expense = async () => {
               <LuChevronDown className="ml-2" size="24" />
             </Heading>
           </Flex>
-          <Box>
-            <ExpenseTable data={data} />
-          </Box>
+          <ExpenseTable data={data} loading={isLoading}/>
         </Box>
-        <Box>{/* <ActionCard title="Add Expense" buttonText="Add Expense" handleClick={handleNewExpenseClick}/> */}</Box>
+        <Box>
+          <AddExpense refreshList={fetchExpenses} />
+        </Box>
       </Grid>
     </div>
   );
