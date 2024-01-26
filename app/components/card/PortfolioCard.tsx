@@ -8,7 +8,7 @@ const PortfolioCard: React.FC<{color?: string}> = ({color = "bg-blue-100"}) => {
       <Flex direction="column">
         <Flex direction="row" justify="between">
           <Flex direction="column">
-            <Text size="6" weight="bold">
+            <Text size="5" weight="bold">
               THB 21,000
             </Text>
             <Text weight="medium" mt="2">

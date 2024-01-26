@@ -3,9 +3,10 @@ import React from "react";
 import {Box, Flex, Text, Button, TextField, Select} from "@radix-ui/themes";
 import {useForm, SubmitHandler, Controller} from "react-hook-form";
 import {Expense} from "../types";
-import {PulseLoader} from "react-spinners";
 import {expenseAPI} from "../services";
 import styles from "./AddExpense.module.scss";
+// import { DayPicker } from 'react-day-picker';
+// import 'react-day-picker/dist/style.css';
 
 const AddExpense: React.FC<{refreshList: () => void}> = ({refreshList}) => {
   const {
@@ -108,6 +109,10 @@ const AddExpense: React.FC<{refreshList: () => void}> = ({refreshList}) => {
               </Text>
             )}
           </Box>
+          {/* <DayPicker
+            mode="single"
+            {...register("date", {required: true})}
+          /> */}
           <Button mt="4" size="3" type="submit" disabled={!isValid} className={`${styles.button} ${isValid ? styles.valid : styles.invalid}`}>
             Add Expense
           </Button>

@@ -1,6 +1,21 @@
-$theme-color-primary: rgb(17 24 39);
-$theme-color-secondary: rgb(168 85 247);
-$theme-color-primary-accent: rgb(31, 35, 42);
-$theme-color-secondary-accent: rgb(199, 148, 247);
+// $theme-color-primary: rgb(17 24 39);
+// $theme-color-secondary: rgb(168 85 247);
+// $theme-color-primary-accent: rgb(31, 35, 42);
+// $theme-color-secondary-accent: rgb(199, 148, 247);
+// $border-color: #cecece;
+// $invalid-color: #b1b1b1;
+// $chart-primary-color: #8884d8;
+
+$theme-color-primary: #FCDC73;
+$theme-color-secondary: #193948;
+$theme-color-tertiary: #E76268;
+$theme-color-quaternary: #4FADC0;
+
+$theme-color-primary-accent: $theme-color-primary;
+$theme-color-secondary-accent: $theme-color-secondary;
+$chart-primary-color: $theme-color-quaternary;
+
 $border-color: #cecece;
 $invalid-color: #b1b1b1;
+
+$border-radius: 3px;

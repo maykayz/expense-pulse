@@ -19,10 +19,10 @@ const ExpenseTable: React.FC<{
         <Table.Root>
           <Table.Header className={styles.header}>
             <Table.Row>
-              <Table.Cell className="text-white font-semibold">Platform</Table.Cell>
-              <Table.Cell className="text-white font-semibold">Category</Table.Cell>
-              <Table.Cell className="text-white font-semibold">Amount</Table.Cell>
-              <Table.Cell className="text-white font-semibold">Date</Table.Cell>
+              <Table.Cell className="text-theme-color-secondary font-semibold">Platform</Table.Cell>
+              <Table.Cell className="text-theme-color-secondary font-semibold">Category</Table.Cell>
+              <Table.Cell className="text-theme-color-secondary font-semibold">Amount</Table.Cell>
+              <Table.Cell className="text-theme-color-secondary font-semibold">Date</Table.Cell>
             </Table.Row>
           </Table.Header>
 

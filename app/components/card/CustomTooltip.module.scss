@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.wrapper {
+  padding: 15px;
+  background: white;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  text-align: left;
+}
+.heading {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  color: $chart-primary-color;
+  text-transform: capitalize;
+}

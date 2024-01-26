@@ -1,10 +1,19 @@
 import type {Config} from "tailwindcss";
-const { blackA, mauve, violet } = require('@radix-ui/colors');
+const {blackA, mauve, violet} = require("@radix-ui/colors");
+const color = require("./app/color");
 
 const config: Config = {
   content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      colors: {
+        ...mauve,
+        ...violet,
+        "theme-color-primary": color.primary,
+        "theme-color-secondary": color.secondary,
+        "theme-color-tertiary": color.tertiary,
+        "theme-color-quaternary": color.quaternary,
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

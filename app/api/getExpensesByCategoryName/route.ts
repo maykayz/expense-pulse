@@ -34,8 +34,8 @@ export const GET = async (req: NextRequest) => {
       };
     }
 
-    if(category) {
-      where.category = category;
+    if (category) {
+      where.category = category; // Filter by category if it's specified
     }
 
     const expenses = await getAllExpenses({

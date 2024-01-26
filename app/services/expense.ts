@@ -3,7 +3,13 @@ import {Expense} from '../types';
 
 const expenseAPI = {
     getExpenses: () => axios.get('/expenses'),
-    getExpensesByYear: (year: number) => axios.get('/getExpensesByYear', {
+    getExpensesByYear: (year: number, category?: string) => axios.get('/getExpensesByYear', {
+        params: {
+            year,
+            category
+        }
+    }),
+    getExpensesByCategory: (year: number) => axios.get('/getExpensesByCategory', {
         params: {
             year
         }

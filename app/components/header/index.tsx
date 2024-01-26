@@ -6,12 +6,12 @@ import {MdOutlineKeyboardArrowDown} from "react-icons/md";
 
 const Header: React.FC<{title: string}>= ({title}) => {
   const user = {
-    name: "May K",
-    avatar: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80"
+    name: "Eaint",
+    avatar: "https://lh3.googleusercontent.com/-0XoBw-dQttk/AAAAAAAAAAI/AAAAAAAAAAA/AFNEGgLYjXqJ8a-GT6_2IdYg3dR_-b8yDA/photo.jpg?sz=46"
   };
   return (
-    <Flex direction="row" justify="between" mb="5">
-      <Heading mb="2" size="8">
+    <Flex direction="row" justify="between" mb="2">
+      <Heading mb="2" size="6">
         {title}
       </Heading>
       <div>
@@ -19,8 +19,8 @@ const Header: React.FC<{title: string}>= ({title}) => {
           <DropdownMenu.Root>
             <DropdownMenu.Trigger className="select-none outline-none">
               <Flex direction="row" align="center" className=" bg-slate-100 pr-4 rounded-3xl cursor-pointer ">
-                <img className="w-12 h-12 rounded-3xl object-cover" src={user?.avatar} />
-                <Text size="3" ml="3" weight="bold">
+                <img className="w-10 h-10 rounded-3xl object-cover" src={user?.avatar} />
+                <Text size="2" ml="3" weight="medium">
                   {user?.name}
                 </Text>
                 <MdOutlineKeyboardArrowDown className="ml-2" size="24" />
